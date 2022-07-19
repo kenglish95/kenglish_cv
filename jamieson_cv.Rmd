@@ -1,0 +1,115 @@
+---
+name: Michelle K
+surname: Jamieson
+position: "Research Fellow"
+address: "SCADR, Edinburgh Napier University"
+#phone:
+www: themichjam.github.io
+email: "hellomichjam@gmail.com"
+twitter: themichjam
+github: themichjam
+#linkedin:
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# install.packages("pacman")
+pacman::p_load(rorcid,
+               usethis,
+               tidyverse,
+               anytime,
+               lubridate,
+               janitor,
+               vitae,
+               rorcid,
+               scholar,
+               readxl)
+
+# read files
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  all <- readxl::excel_sheets(filename)
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+filename <- here::here("jamieson_vitae_data.xlsx")
+readExcelSheets(filename)
+```
+
+# Education
+
+```{r education}
+# Run below lines to find orcid auth key and save to enviroment
+# orcid_auth()
+# usethis::edit_r_environ()
+
+edu <- bind_rows(
+orcid_educations("0000-0003-2145-8988")$`0000-0003-2145-8988`$`affiliation-group`$summaries
+)
+
+edu %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+```
+
+# Scholarships
+
+```{r scholarships}
+# manual input from .xlsx
+scholarships %>% 
+  detailed_entries(what, when, with, where, why)
+```
+
+# Publications
+
+```{r publications}
+# knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+# bibliography_entries("packages.bib") %>%
+#   arrange(desc(author$family), issued)
+# scholar id is the 12 character string in URL, may start with an underscore = "_EHtU1EAAAAJ"
+
+scholar::get_publications("_EHtU1EAAAAJ") %>%
+  detailed_entries(
+    what = title,
+    when = year,
+    with = author,
+    where = journal,
+    why = cites
+  )
+```
+
+# Memberships
+
+```{r memberships}
+
+rorcid::orcid_memberships("0000-0003-2145-8988")
+
+edu <- bind_rows(
+orcid_memberships("0000-0003-2145-8988")$`0000-0003-2145-8988`$`affiliation-group`$summaries
+)
+
+edu %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+
+```
+
