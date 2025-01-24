@@ -1,13 +1,13 @@
 ---
-name: Michelle K
-surname: Jamieson
-position: "Research Fellow"
-address: "SCADR, Edinburgh Napier University"
+name: Kirstie Ken
+surname: English
+position: "Quantitative Methods Tutor"
+address: "School of Social & Political Science, University of Glasgow"
 #phone:
-www: themichjam.github.io
-email: "hellomichjam@gmail.com"
-twitter: themichjam
-github: themichjam
+www: https://kenglish95.github.io
+email: "kirstie.ken.english@glasgow.ac.uk"
+Bluesky: kenglish
+
 #linkedin:
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
@@ -43,7 +43,7 @@ readExcelSheets <- function(filename){
   list2env(list, envir = .GlobalEnv)
 }
 
-filename <- here::here("jamieson_vitae_data.xlsx")
+filename <- here::here("kenglish_vitae_data.xlsx")
 readExcelSheets(filename)
 ```
 
@@ -55,7 +55,7 @@ readExcelSheets(filename)
 # usethis::edit_r_environ()
 
 edu <- bind_rows(
-orcid_educations("0000-0003-2145-8988")$`0000-0003-2145-8988`$`affiliation-group`$summaries
+orcid_educations("0000-0002-3050-2592")$`0000-0002-3050-2592`$`affiliation-group`$summaries
 )
 
 edu %>%
@@ -97,10 +97,10 @@ scholar::get_publications("_EHtU1EAAAAJ") %>%
 
 ```{r memberships}
 
-rorcid::orcid_memberships("0000-0003-2145-8988")
+rorcid::orcid_memberships("0000-0002-3050-2592")
 
 edu <- bind_rows(
-orcid_memberships("0000-0003-2145-8988")$`0000-0003-2145-8988`$`affiliation-group`$summaries
+orcid_memberships("0000-0002-3050-2592")$`0000-0002-3050-2592`$`affiliation-group`$summaries
 )
 
 edu %>%
