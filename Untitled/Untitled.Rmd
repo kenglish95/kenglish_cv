@@ -1,20 +1,21 @@
 ---
-name: Kirstie Ken
-surname: English 
-position: "Quantitative Methods Tutor"
-address: "School of Social & Political Science, University of Glasgow"
-#phone:
-www: https://kenglish95.github.io
-email: "kirstie.ken.english@glasgow.ac.uk"
-Bluesky: kenglish
-
-#linkedin:
+name: Marie
+surname: Curie
+position: "Professor"
+pronouns: she/her
+address: "School of Physics & Chemistry, École Normale Supérieure"
+phone: +1 22 3333 4444
+www: mariecurie.com
+email: "Marie.Curie@ens.fr"
+twitter: mariecurie
+github: mariecurie
+linkedin: mariecurie
 date: "`r format(Sys.time(), '%B %Y')`"
-headcolor: 414141
-output: 
+output:
   vitae::awesomecv:
     page_total: true
 ---
+
 
 
 ```{r setup, include=FALSE}
@@ -64,14 +65,18 @@ scholarships %>%
 library(rorcid)
 library(tidyverse)
 out <- works(orcid_id("0000-0002-3050-2592")) 
-out %>%
+ tibble(
+   Journal = out$`journal-title.value`,
+   Title = out$title.title.value,
+   Year = out$`publication-date.year.value`,
+   DOI = out$url.value
+ ) %>% 
   detailed_entries(
-    what = title,
-    when = year,
-    with = author,
-    where = journal,
-    why = cites
-  )
+  DOI,
+  Journal,
+  Title,
+  Year
+)
 ```
 # Work experience
 
@@ -89,11 +94,5 @@ my_exp %>%
     where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.region`}")
   )
 
-#tribble(
-#  ~ Experience, ~ Year, ~ Institution, ~ Details,
-#  "Current Job Title", "Years of Employment", "Organization", #"Job Description",
-#  "Previous Job Title", "Years of Employment", "Organization", #"Job Description",
-  
-#) %>% 
-#  detailed_entries(Details, Year, Experience, Institution)
 ```
+

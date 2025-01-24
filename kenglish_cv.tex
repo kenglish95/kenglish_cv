@@ -1,0 +1,246 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Kirstie Ken}{English}
+
+\position{Quantitative Methods Tutor}
+\address{School of Social \& Political Science, University of Glasgow}
+
+\email{\href{mailto:kirstie.ken.english@glasgow.ac.uk}{\nolinkurl{kirstie.ken.english@glasgow.ac.uk}}}
+\homepage{\url{https://kenglish95.github.io}}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {January 2025}
+    {Kirstie Ken English~~~·~~~Curriculum Vitae}
+  {\thepage~ of \pageref{LastPage}~}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\section{Scholarships}\label{scholarships}
+
+\begin{cventries}
+    \cventry{University of Glasgow}{ESRC AQM Stream PhD Studenship}{Glasgow}{Oct. 2017 - Dec. 2022}{\begin{cvitems}
+\item To undertake advanced quantiative research with novel data linkage
+\end{cvitems}}
+    \cventry{University of Glasgow}{Educational \& Marshall Trust Bursary}{Glasgow}{Sep. 2016 - Jun. 2017}{\begin{cvitems}
+\item Awarded for academic merit to undertake an MRes
+\end{cvitems}}
+    \cventry{University of Glasgow}{Carnegie-Cameron Taught Postgraduate Bursary}{}{Sep. 2014 - Jun. 2015}{\begin{cvitems}
+\item Awarded for academic merit to undertake a MSc
+\end{cvitems}}
+\end{cventries}
+
+\section{Publications}\label{publications}
+
+\begin{cventries}
+    \cventry{Reflexivity in quantitative research: A rationale and beginner's guide}{MK Jamieson, GH Govaart, M Pownall}{Social and Personality Psychology Compass}{2023}{\begin{cvitems}
+\item 334
+\end{cvitems}}
+    \cventry{Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes}{M Pownall, F Azevedo, LM König, HR Slack, TR Evans, Z Flack, ...}{Royal Society Open Science}{2023}{\begin{cvitems}
+\item 30
+\end{cvitems}}
+    \cventry{The impact of open and reproducible scholarship on students’ scientific literacy, engagement, and attitudes towards science: a review and synthesis of the evidence}{M Pownall, F Azevedo, LM König, HR Slack, T Evans, Z Flack, S Grinschgl, ...}{}{2022}{\begin{cvitems}
+\item 8
+\end{cvitems}}
+    \cventry{Reflexivity in quantitative research: A rationale and beginner’s guide. PsyArxiv}{MK Jamieson, M Pownall, GH Govaart}{}{2022}{\begin{cvitems}
+\item 6
+\end{cvitems}}
+    \cventry{Austerity Cure: The Impact of Benefit Sanctions on Mental Health}{MK Jamieson}{Luna Press Publishing}{2020}{\begin{cvitems}
+\item 6
+\end{cvitems}}
+    \cventry{What might make nurses stay? A protocol for discrete choice experiments to understand NHS nurses’ preferences at early-career and late-career stages}{OZ Ejebu, J Turnbull, I Atherton, AM Rafferty, B Palmer, J Philippou, ...}{BMJ open}{2024}{\begin{cvitems}
+\item 3
+\end{cvitems}}
+    \cventry{What researching the benefits system has taught us about being trauma informed when people encounter traumatising systems}{S Allan, H Roberts, M Clancy, V Nair, C MacKenzie-Nash, K Braekken, ...}{Clinical Psychology Forum}{2022}{\begin{cvitems}
+\item 3
+\end{cvitems}}
+    \cventry{Naloxone in Police Scotland: Pilot Evaluation}{P Hillen, E Speakman, N Dougall, I Heyman, J Murray, M Jamieson, ...}{Edinburgh Napier University}{2022}{\begin{cvitems}
+\item 2
+\end{cvitems}}
+    \cventry{Police officer knowledge of and attitudes to opioid overdose and naloxone administration: an evaluation of police training in Scotland}{P Hillen, EM Speakman, M Jamieson, N Dougall, I Heyman, J Murray, ...}{Policing and Society}{2025}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Coming and going: A narrative review exploring the push-pull factors during nurses' careers}{OZ Ejebu, J Philippou, J Turnbull, AM Rafferty, W Palmer, J Prichard, ...}{International Journal of Nursing Studies}{2024}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The occupational roles of nurses and midwives in the UK: an analysis of the Nursing and Midwifery Council-census England and Wales 2021 data linkage study}{M Jamieson, J Savinc, I Atherton}{Swansea University}{2024}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Police officer’s perspectives of people who use drugs: compassion or stigma? Evidence from an evaluation of Police Scotland’s naloxone pilot}{P Hillen, I Heyman, N Dougall, J Murray, E Aston, M Jamieson, ...}{}{2024}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{What might make nurses stay? A protocol for discrete choice experiments to understand NHS nurses’ preferences at early-and late-career stages}{OZ Ejebu, J Turnbull, I Atherton, AM Rafferty, B Palmer, J Philippou, ...}{BMJ Open}{2024}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Understanding barriers to employment for people living with severe mental illness}{MK Jamieson}{University of Glasgow}{2024}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The dynamics of the nursing and midwifery professions: Initial findings from analysis of longitudinal registrant data}{I Atherton, M Jamieson}{International Journal of Population Data Science}{2023}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The dynamics of the nursing workforce (before and during) COVID-19: insights into retention and exit using novel registration data}{M Jamieson}{}{2022}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Understanding the dynamics of the nursing workforce using registrant data}{M Jamieson}{}{2022}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{BLOG-Why is working with administrative data important?}{M Jamieson}{}{2022}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The dynamics of the nursing workforce: insights into retention and exit using registration data.}{M Jamieson}{International Journal of Population Data Science}{2022}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Palliative care, unpaid care and deprivation in Scotland: a study using census and vital registration data.}{I Atherton, M Jamieson, J Savinc}{International Journal of Population Data Science}{2022}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Spotlight on Michelle K Jamieson}{M Jamieson}{}{2021}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Reply to Clifford, G., Dalgleish, T. and Hitchcock, C., 2018. Prevalence of auditory pseudohallucinations in adult survivors of physical and sexual trauma with chronic post …}{MK Jamieson, B Alderson-Day, S Allan, R Brand, A Gumley, A Hart, ...}{Elsevier Science}{2021}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Organisational duty of candour procedure: first year review}{M Jamieson}{https://www.gov.scot/publications/organisational-duty-candour-procedure …}{2020}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Off Label or ‘Grey Prescribing’of Psychotropic Drugs: Challenges for Mental Health Data Analysis}{MK Jamieson}{}{2020}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Managing your PhD with a health condition}{K Tripathi, A Johnstone, M Jamieson}{A Guide for Psychology Postgraduates}{2019}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The Impact of Deprivation on the Health \& Employment Opportunities of People Living with Psychosis in Scotland}{M Jamieson}{EARLY INTERVENTION IN PSYCHIATRY}{2018}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The Impact of Deprivation on the Health \& Employment Opportunities of Individuals Living with Psychosis in Scotland}{M Jamieson}{EARLY INTERVENTION IN PSYCHIATRY}{2018}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{The secret life of a dyscalculiac}{M Jamieson}{PSYCHOLOGIST}{2015}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+    \cventry{Co. Part I. Magnetism. STUDENTS of natural science are indebted to Professor JAMIESON for an admirable introduction to magnetism and electricity. The}{M JAMIESON, CE London, C Griffin}{THE BRITISH MEDICAL JOURNAL}{1890}{\begin{cvitems}
+\item 0
+\end{cvitems}}
+\end{cventries}
+
+\begin{cventries}
+    \cventry{}{Access to Social Justice: Effective Remedies for Social Rights}{2025}{}{}\vspace{-4.0mm}
+    \cventry{https://www.scottishhumanrights.com/media/2738/scotlands-open-budget-survey-2023-report.pdf}{Scotland’s Open Budget Survey 2023}{2024}{Scottish Human Rights Commission }{}\vspace{-4.0mm}
+    \cventry{}{An overview of the risks and benefits of data representation for LGBTI+ people}{2024}{}{}\vspace{-4.0mm}
+    \cventry{https://www.nuffieldfoundation.org/wp-content/uploads/2019/11/Final-report-The-practitioner-perspective-on-access-to-justice-for-social-rights-1.pdf}{The Practitioner Perspective on Access to Justice for Social Rights: Addressing the Accountability Gap}{2022}{}{}\vspace{-4.0mm}
+    \cventry{http://youngwomenscot.org/wp-content/uploads/2024/04/SYWS22-23ExperiencesofAccessingHealthcare.pdf}{The Status of Young Women in Scotland 2022-2023 Experiences of Accessing Healthcare}{2022}{The Young Women's Movement }{}\vspace{-4.0mm}
+    \cventry{https://www.scottishhumanrights.com/media/2013/scotland-2019-obi-summary-report-vfinal.pdf}{The Open Budget Survey }{2020}{Scottish Human Rights Commission }{}\vspace{-4.0mm}
+    \cventry{https://doi.org/10.1177/2399808320925822}{Predicting cycling volumes using crowdsourced activity data}{0}{Environment and Planning B: Urban Analytics and City Science}{}\vspace{-4.0mm}
+    \cventry{}{Predicting cycling volumes using crowdsourced activity data}{2021}{Environment and Planning B: Urban Analytics and City Science}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Work experience}\label{work-experience}
+
+\begin{cventries}
+    \cventry{}{University of Glasgow}{Glasgow, NA}{NA - NA}{}\vspace{-4.0mm}
+    \cventry{Longitudinal Data Analyst}{University of Surrey}{Guildford, NA}{2022 - 2032}{}\vspace{-4.0mm}
+    \cventry{Freelance Quality Diversity and Inclusion Survey Consultant }{Max Delbrück Center for Molecular Medicine in the Helmholtz Association}{Berlin, NA}{2023 - 2024}{}\vspace{-4.0mm}
+    \cventry{Freelance Research Consultant }{The Young Women's Movement}{Edinbrugh, Scotland}{2022 - 2023}{}\vspace{-4.0mm}
+    \cventry{}{Scottish Human Rights Commission}{Edinbrugh, Scotland}{2022 - 2023}{}\vspace{-4.0mm}
+    \cventry{Graduate Teaching Assistant }{University of Glasgow}{Glasgow, NA}{2022 - 2022}{}\vspace{-4.0mm}
+    \cventry{Social Rights Research Fellow }{University of Stirling}{Stirling, NA}{2021 - 2022}{}\vspace{-4.0mm}
+    \cventry{Graduate Teaching Assistant }{University of Glasgow}{Glasgow, NA}{2020 - 2021}{}\vspace{-4.0mm}
+    \cventry{Consultant }{Scottish Human Righst Commission}{Edinbrugh, Scotland}{2018 - 2019}{}\vspace{-4.0mm}
+    \cventry{Open Budget Survey Intern }{Scottish Human Rights Commission}{Edinbrugh, Scotland}{2018 - 2018}{}\vspace{-4.0mm}
+    \cventry{Data Intern }{University of Glasgow}{Glasgow, NA}{2016 - 2018}{}\vspace{-4.0mm}
+    \cventry{Quantitative Data Handling Contractor }{Scottish Human Rights Commission}{Edinbrugh, Scotland}{2018 - 2018}{}\vspace{-4.0mm}
+    \cventry{Research Intern }{University of Glasgow}{Glasgow, NA}{2017 - 2018}{}\vspace{-4.0mm}
+    \cventry{Q-Step Intern }{University of Glasgow}{Glasgow, NA}{2017 - 2017}{}\vspace{-4.0mm}
+    \cventry{Q-Step Intern }{Urban Big Data Centre}{Glasgow, NA}{2016 - 2016}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+\label{LastPage}~
+\end{document}
